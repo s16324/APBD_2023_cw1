@@ -13,7 +13,7 @@ namespace Crawler
 
             if (args.Length == 0)
             {
-                throw new ArgumentException("Err: Brak argumentu (URL)");
+                throw new ArgumentNullException("Err: Brak argumentu (URL)");
             }
             String url = args[0];
             Regex urlRegex = new Regex(@"^(http|ftp|https|www)://([\w+?\.\w+])+([a-zA-Z0-9\~\!\@\#\$\%\^\&\*\(\)_\-\=\+\\\/\?\.\:\;\'\,]*)?$", RegexOptions.IgnoreCase);//
